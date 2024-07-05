@@ -49,4 +49,9 @@ func main() {
 
 	GrowSlice(words2, "color")
 	fmt.Println("words2: ", words2)
+
+	//3.
+	// main point of exercise 3 is to also give make the desired capacity if it's known beforehand
+	// this reduces the amount of reallocations a growing slice needs to perform
+	// thus reducing the garbage collector's work, and leaving more resources for the actual program to run
 }
