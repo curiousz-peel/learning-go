@@ -24,7 +24,7 @@ func MakePersonPointer(firstName, lastName string, age int) *Person {
 	}
 }
 
-func Updateslice(words []string, lastWord string) {
+func UpdateSlice(words []string, lastWord string) {
 	words[len(words)-1] = lastWord
 	fmt.Println("from update slice: ", words)
 }
@@ -44,7 +44,7 @@ func main() {
 	words1 := []string{"lorem", "ipsum", "dolor"}
 	words2 := []string{"lorem", "ipsum", "dolor"}
 
-	Updateslice(words1, "color")
+	UpdateSlice(words1, "color")
 	fmt.Println("words1: ", words1)
 
 	GrowSlice(words2, "color")
