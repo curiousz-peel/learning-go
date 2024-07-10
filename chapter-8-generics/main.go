@@ -80,18 +80,32 @@ func main() {
 	DoPrint(printableFloat64)
 
 	//3.
-	var list LinkedList[int]
-	list.Add(10)
-	list.Add(12)
-	list.Add(13)
-	list.Add(14)
-	list.Add(15)
-	list.Insert(1, 0)
-	list.Insert(1, 5)
-	fmt.Println(list.Index(10))
-	fmt.Println(list.Index(16))
+	var intList LinkedList[int]
+	intList.Add(10)
+	intList.Add(12)
+	intList.Add(13)
+	intList.Add(14)
+	intList.Add(15)
+	intList.Insert(1, 0)
+	intList.Insert(1, 5)
+	fmt.Println(intList.Index(10))
+	fmt.Println(intList.Index(16))
 
-	for el := list.head; el != nil; el = el.next {
+	for el := intList.head; el != nil; el = el.next {
 		fmt.Println(el.val)
 	}
+
+	var stringList LinkedList[string]
+	stringList.Add("a")
+	stringList.Add("b")
+	stringList.Add("c")
+	stringList.Add("d")
+	stringList.Add("e")
+	stringList.Insert("a", 0)
+
+	for el := stringList.head; el != nil; el = el.next {
+		fmt.Println(el.val)
+	}
+
+	fmt.Println(stringList.Index("c"))
 }
