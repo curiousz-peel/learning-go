@@ -73,7 +73,7 @@ func main() {
 	fmt.Println(Double(myFloat64))
 
 	//2.
-	printableInt := PrintableInt(3)
+	var printableInt PrintableInt = 3
 	printableFloat64 := PrintableFloat64(32.222)
 
 	DoPrint(printableInt)

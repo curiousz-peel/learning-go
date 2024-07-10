@@ -15,7 +15,8 @@ func Double[T Doubler](val T) T {
 }
 
 // 2.
-type Printable[T fmt.Stringer] interface {
+type Printable interface {
+	fmt.Stringer
 	~int | ~float64
 }
 
@@ -28,10 +29,11 @@ func (p PrintableInt) String() string {
 type PrintableFloat64 float64
 
 func (p PrintableFloat64) String() string {
-	return strconv.FormatFloat(float64(p), 'f', 3, 64)
+	// return strconv.FormatFloat(float64(p), 'f', 3, 64)
+	return fmt.Sprintf("%f", p)
 }
 
-func DoPrint[T Printable[fmt.Stringer]](p T) {
+func DoPrint[T Printable](p T) {
 	fmt.Println(p)
 }
 
