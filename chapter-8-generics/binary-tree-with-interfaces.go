@@ -37,7 +37,7 @@ func (o OrderableInt) Order(v any) int {
 type OrderableString string
 
 func (o OrderableString) Order(v any) int {
-	return strings.Compare(string(o), v.(string))
+	return strings.Compare(string(o), string(v.(OrderableString)))
 }
 
 func (t *Tree) String() string {
